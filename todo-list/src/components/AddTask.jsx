@@ -1,19 +1,21 @@
 import { useState } from "react";
 
-export const AddTask = ({editTaskList}) => {
-    const [taskTitle, setTaskTitle]= useState("")
-    const [taskDate, setTaskDate]= useState("")
-    const [taskDescription, setTaskDescription]= useState("")
-    const [isTaskCreated, setIsTaskCreated]= useState(false)
+export const AddTask = ({editTaskList, id}) => {
+    const [taskTitle, setTaskTitle] = useState("")
+    const [taskDate, setTaskDate] = useState("")
+    const [taskDescription, setTaskDescription] = useState("")
+    const [isTaskCreated, setIsTaskCreated] = useState(false)
+    const [nexTaskId,setNexTaskId] = useState(id)
 
     const createTask = () =>{
 
 
-        editTaskList([taskTitle, taskDate, taskDescription])
+        editTaskList([taskTitle, taskDate, taskDescription,nexTaskId])
         setTaskTitle("")
         setTaskDate("")
         setTaskDescription("")
         setIsTaskCreated(true)
+        setNexTaskId(nexTaskId + 1);
         
 
     }
@@ -40,7 +42,7 @@ export const AddTask = ({editTaskList}) => {
             )}
 
            <div className="w-full pt-5 flex justify-center items-center ">
-           <button className="button__addtask px-6 py-3 bg-blue-900 text-white rounded-xl font-semibold" onClick={createTask }>Add task</button>
+           <button className="button__addtask px-6 py-3 bg-blue-900 text-white rounded-xl font-semibold" onClick={createTask}>Add task</button>
            </div>
            
 
