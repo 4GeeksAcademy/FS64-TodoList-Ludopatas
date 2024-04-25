@@ -20,7 +20,7 @@ function App() {
     <div className="todo__container w-2/3 h-2/3 bg-slate-100 p-10 rounded-xl flex flex-col">
       <div className="flex w-full justify-between items-center">
         <button className="button__addtask px-5 py-4 bg-blue-900 text-white rounded-xl">Add task</button>
-        <FilterTask />
+        <FilterTask /> {taskList}
       </div>
       <div className='w-full h-full mt-2'>
         <TaskList />
