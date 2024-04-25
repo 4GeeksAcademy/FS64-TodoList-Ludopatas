@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const AddTask = ({editTaskList, id}) => {
+export const AddTask = ({editTaskList, id, closeAddTaskPopup}) => {
     const [taskTitle, setTaskTitle] = useState("")
     const [taskDate, setTaskDate] = useState("")
     const [taskDescription, setTaskDescription] = useState("")
@@ -16,13 +16,17 @@ export const AddTask = ({editTaskList, id}) => {
         setTaskDescription("")
         setIsTaskCreated(true)
         setNexTaskId(nexTaskId + 1);
+        setTimeout(() =>closeAddTaskPopup(),500);
         
 
     }
 
     return (
         <>
-        <div className=" w-2/5 bg-slate-200 rounded-xl p-5">
+        <div className=" w-2/5 bg-slate-200 rounded-xl p-5 fixed top-50 left-50 ">
+            <div className="pb-5 w-full flex justify-end items-center">
+             <button className="text-2xl font-bold hover:text-red-500" onClick={closeAddTaskPopup}>X</button>
+           </div>
             <div className="pb-5 w-full flex justify-center items-center">
            <h1 className="text-2xl font-bold">Task List</h1>
            </div>
