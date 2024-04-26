@@ -37,7 +37,7 @@ function App() {
     <div className="todo__container w-2/3  bg-slate-100 p-10 rounded-xl flex flex-col">
       <div className="flex w-full justify-between items-center">
         <button className="button__addtask px-5 py-4 bg-blue-900 text-white rounded-xl" onClick={showAddTaskPopup}>Add task</button>
-        <input className="px-2 py-1 rounded-xl" type="text" name="" id="" onChange={e => setSearchTerm(e.target.value)} value={searchTerm} />
+        <input className="px-2 py-1 rounded-xl" type="text" name="" id="" onChange={e => setSearchTerm(e.target.value)} value={searchTerm} placeholder='Search...' />
       </div>
       <div className='w-full h-full mt-2'>
        {taskList.length > 0 && <TaskList taskList={taskList} searchTerm={searchTerm} setTaskList={setTaskList} />}
