@@ -7,11 +7,11 @@ export const TaskList = ({ taskList, searchTerm, setTaskList }) => {
 
   const tasks = taskList.filter(task => {
     const title = task[0].toLowerCase();
-    console.log(title)
+    
     const description = task[2].toLowerCase();
-    console.log(description)
+    
     searchTerm = searchTerm.toLowerCase();
-    console.log(searchTerm)
+    
     return title.includes(searchTerm) || description.includes(searchTerm);
   }).map((task, index) => (
     <Task key={index} id={index} title={task[0]} date={task[1]} description={task[2]} setTaskList={setTaskList} />
