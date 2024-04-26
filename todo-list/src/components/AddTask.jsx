@@ -31,11 +31,11 @@ export const AddTask = ({editTaskList, id, closeAddTaskPopup}) => {
            <h1 className="text-2xl font-bold">Task List</h1>
            </div>
            <div className="py-3 w-full flex justify-between items-center">
-          <input className="px-2 py-1 rounded-xl" type="text" name="" id=""  onChange={e => setTaskTitle(e.target.value)} value={taskTitle} />
+          <input className="px-2 py-1 rounded-xl" type="text" name="" id=""  onChange={e => setTaskTitle(e.target.value)} value={taskTitle} placeholder="Task Title" />
           <input className="px-2 py-1 rounded-xl" type="date" name="" id=""  onChange={e => setTaskDate(e.target.value)} value={taskDate} />
            </div>
            <div className=" pt-5 w-full flex justify-center items-center">
-          <textarea className="w-full px-2 py-1 rounded-xl" name="" id="" cols="" rows="7"  onChange={e => setTaskDescription(e.target.value)} value={taskDescription}></textarea>
+          <textarea className="w-full px-2 py-1 rounded-xl" name="" id="" cols="" rows="7"  onChange={e => setTaskDescription(e.target.value)} value={taskDescription} placeholder="Task Description"></textarea>
            </div>
            {isTaskCreated && (
             <>
