@@ -40,7 +40,7 @@ export const AddTask = ({editTaskList}) => {
             )}
 
            <div className="w-full pt-5 flex justify-center items-center ">
-           <button className="button__addtask px-6 py-3 bg-blue-900 text-white rounded-xl font-semibold" onClick={createTask }>Add task</button>
+           <button className="button__addtask px-6 py-3 bg-blue-900 text-white rounded-xl font-semibold" onClick={createTask}>Add task</button>
            </div>
            
 
